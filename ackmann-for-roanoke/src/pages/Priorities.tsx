@@ -2,7 +2,7 @@ import './pages.css'
 
 export default function Priorities() {
   return (
-    <section className="priorities max-w-4xl mx-auto px-4 py-8">
+    <section className="priorities mx-auto px-4 py-8">
       <h2 className="text-3xl mb-4">Priorities</h2>
       <p className="priorities-text ">If elected, I will:</p>
       <ul className="priorities-list list-image-[url(../assets/Check.png)]">
