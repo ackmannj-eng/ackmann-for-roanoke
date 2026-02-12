@@ -2,7 +2,7 @@ const cityHall = new URL('../../assets/city hall photo.jpg', import.meta.url).hr
 
 export default function About() {
   return (
-    <section className="about max-w-4xl mx-auto px-4 py-8">
+    <section className="about mx-auto px-4 py-8">
       <h2 className="text-3xl mb-4 ">About</h2>
       <img src={cityHall} alt="Roanoke City Hall" className="about-photo" />
       <p className="about-text">
