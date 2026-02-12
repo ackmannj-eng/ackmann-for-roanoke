@@ -14,7 +14,7 @@ html,body,#root {
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background: linear-gradient(180deg, var(--white) 0%, #f7f9fc 100%);
+  background: #8DBFFC;
   color: var(--blue);
   -webkit-font-smoothing:antialiased;
 }
@@ -62,23 +62,24 @@ body {
 }
 .candidate{
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 3.6rem;
   letter-spacing: 0.02em;
-  color: var(--blue);
+  color: var(--dark-blue);
 }
 .office{
   margin: 0;
-  color: var(--light-blue);
+  color: var(--blue);
   font-weight:600;
+  font-size: 2.0rem;
 }
 
-/* Hero */
-.hero{
+.hero, .about, .priorities{
   background: linear-gradient(180deg, var(--white) 0%, #eaf3ff 25%, var(--white) 100%);
   padding: 2.5rem 1rem;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(13, 30, 58, 0.08);
   margin-top: 1rem;
+  overflow: auto;
 }
 .hero-inner{
   max-width: 900px;
@@ -106,7 +107,13 @@ body {
 .slogan{
   margin: 0.25rem 0 0;
   font-size: 1.125rem;
-  color: var(--red);
+  font-weight:600;
+  font-style:italic;
+}
+.commitment{
+  margin: 0.25rem 0 0;
+  font-size: 1.125rem;
+  color: var(--blue);
   font-weight:600;
 }
 
@@ -114,7 +121,7 @@ body {
 .site-footer{
   margin-top: 1.75rem;
   text-align:center;
-  color: #556;
+  color: rgb(0, 0, 0);
   font-size: 0.85rem; /* slightly smaller overall footer text */
 }
 

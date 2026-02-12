@@ -1,3 +1,61 @@
 .hero-inner { text-align: center; }
 .headshot { width: 220px; height: auto; border-radius: 8px; }
-.slogan { color: #1f2937; }
+
+/* About page photo: float top-right and allow text to wrap */
+.about-photo {
+	float: right;
+	width: 40%;
+	max-width: 320px;
+	margin-left: 1rem;
+	margin-bottom: 0.5rem;
+	border-radius: 8px;
+	object-fit: cover;
+}
+
+@media (max-width: 720px) {
+	.about-photo {
+		float: none;
+		display: block;
+		width: 100%;
+		max-width: none;
+		margin: 0 0 1rem 0;
+	}
+}
+/* About page paragraph: larger font size */
+.about-text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: black;
+}
+
+.priorities-text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: black;
+}
+
+.priorities-list{
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	padding-inline-start: 0; /* we'll draw our own markers */
+	unicode-bidi: isolate;
+	font-size: 1.125rem;
+}
+
+/* Use a custom, controllable marker so we can add spacing and vertically center */
+.priorities-list li{
+	list-style: none;
+	display: flex;
+	align-items: center; /* vertically center icon and text */
+	gap: 0.5rem; /* space between marker and text */
+	margin: 0.5rem 0; /* small vertical spacing between items */
+}
+
+.priorities-list li::before{
+	content: '✓';
+	display: inline-block;
+	color: inherit;
+	font-weight: 600;
+	margin-right: 0.5rem; /* extra padding to the right of the check */
+	line-height: 1; /* keep marker compact */
+}
