@@ -49,6 +49,7 @@ function App() {
           </main>
 
           <footer className="site-footer py-4" role="contentinfo">
+            <p><a href="mailto:ackmannforroanoke@gmail.com">ackmannforroanoke@gmail.com</a></p>
             <p>Pol. adv. paid for by Jonathan Ackmann</p>
           </footer>
         </div>
