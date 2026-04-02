@@ -41,6 +41,9 @@ export default function NavBar() {
             <li>
               <Link to="/priorities" onClick={() => setOpen(false)} className="block px-4 py-2 hover:bg-gray-50">Priorities</Link>
             </li>
+            <li>
+              <Link to="/upcoming-events" onClick={() => setOpen(false)} className="block px-4 py-2 hover:bg-gray-50">Upcoming Events</Link>
+            </li>
           </ul>
         </div>
       )}

@@ -115,10 +115,13 @@ body {
   }
 }
 .office{
-  margin: 0;
+  margin: 20px;
   color: var(--blue);
   font-weight:600;
   font-size: 2.0rem;
+  p{
+    margin: 0;
+  }
 }
 
 .hero, .about, .priorities{
