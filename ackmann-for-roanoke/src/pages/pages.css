@@ -35,11 +35,9 @@
 }
 
 .priorities-list{
-	margin-block-start: 1em;
-	margin-block-end: 1em;
-	padding-inline-start: 0; /* we'll draw our own markers */
-	unicode-bidi: isolate;
-	font-size: 1.125rem;
+		margin-block-start: 1em;
+		margin-block-end: 1em;
+		padding-inline-start: 0; /* we'll draw our own markers */
 }
 
 /* Use a custom, controllable marker so we can add spacing and vertically center */
