@@ -1,8 +1,9 @@
 
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import listPlugin from '@fullcalendar/list';
 
 const calendarStyles = {
   background: 'rgba(255,255,255,0.97)',
@@ -97,6 +98,17 @@ function eventContent(arg: any) {
 
 export default function Calendar() {
   const [popup, setPopup] = useState<{title: string, details: string} | null>(null);
+  const [calendarView, setCalendarView] = useState(
+    typeof window !== 'undefined' && window.innerWidth <= 750 ? 'listMonth' : 'dayGridMonth'
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setCalendarView(window.innerWidth > 750 ? 'dayGridMonth' : 'listMonth');
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   function handleEventClick(info: any) {
     const match = additionalEventDetails.find(
@@ -115,8 +127,11 @@ export default function Calendar() {
     <div>
       <div style={calendarStyles}>
         <FullCalendar
-          plugins={[dayGridPlugin]}
-          initialView="dayGridMonth"
+          plugins={[
+            dayGridPlugin,
+            listPlugin
+          ]}
+          initialView={calendarView}
           nowIndicator={true}
           weekends={true}
           height="auto"
