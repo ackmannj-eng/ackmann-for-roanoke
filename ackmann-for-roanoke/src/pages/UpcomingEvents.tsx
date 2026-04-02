@@ -99,12 +99,12 @@ function eventContent(arg: any) {
 export default function Calendar() {
   const [popup, setPopup] = useState<{title: string, details: string} | null>(null);
   const [calendarView, setCalendarView] = useState(
-    typeof window !== 'undefined' && window.innerWidth <= 750 ? 'listMonth' : 'dayGridMonth'
+    typeof window !== 'undefined' && window.innerWidth <= 750 ? 'listYear' : 'dayGridMonth'
   );
 
   useEffect(() => {
     function handleResize() {
-      setCalendarView(window.innerWidth > 750 ? 'dayGridMonth' : 'listMonth');
+      setCalendarView(window.innerWidth > 750 ? 'dayGridMonth' : 'listYear');
     }
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
